@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
-  - Spikes
+  - Hazard
+  - Player1
+  - END
   layers:
   - Default
   - TransparentFX

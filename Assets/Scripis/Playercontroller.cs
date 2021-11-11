@@ -1,15 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Playercontroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
  {
      public float speed = 1.0f;
-    
-    
-       Rigidbody2D rigidbody;
+     public int score = 0 ;
      
-     private void Start()
+      Rigidbody2D rigidbody;
+       
+       public void AddScore()
+       {
+           score = score + 1;
+       }
+       public int GetScore()
+       {
+           return score;
+       }
+
+        private void Start()
      {
           rigidbody = GetComponent<Rigidbody2D>();
      }
@@ -29,6 +39,6 @@ public class Playercontroller : MonoBehaviour
          
          rigidbody.AddForce(f);
      }
-     
-
+    
+    
  }

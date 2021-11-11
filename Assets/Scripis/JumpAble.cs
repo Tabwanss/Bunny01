@@ -12,17 +12,12 @@ public class JumpAble : MonoBehaviour
     {
          if (collision.CompareTag("Platform"))
          {
-           Debug.Log("OK");
+           
            Rigidbody2D rigidbody2d = gameObject.GetComponentInParent<Rigidbody2D>();
             rigidbody2d.AddForce(new Vector2(0,jump),ForceMode2D.Impulse);   
         
          }
-         else if (collision.CompareTag("Spikes"))
-        {
-            Debug.Log(" dead");
-            Rigidbody2D rigidbody2d = gameObject.GetComponentInParent<Rigidbody2D>();
-            rigidbody2d.transform.Rotate(90f,0.0f,0.0f, Space.Self);
-        }
+         
 
          
     
